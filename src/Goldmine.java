@@ -1,3 +1,9 @@
+//vi skal have lavet så ved fejlindtastning skal den gå i loopet igen indtil man taster rigtigt.
+// se om vi kan få det indtastede playername til at stå de forskellige steder
+// ændre engelsk/dansk i de tekstfelter der er skrevet her i main
+// evt ting der er overset????
+
+
 import java.util.Scanner;
 
 public class Goldmine {
