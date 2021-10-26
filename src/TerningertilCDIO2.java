@@ -1,3 +1,5 @@
+//hans har lavet dette. pas på med at ændre, da det er vores skabelon
+
 import java.util.Random;
 import java.util.Scanner;
 

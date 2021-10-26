@@ -1,4 +1,4 @@
-
+//Vi skal have ændret til Ali' kode
     public class SpilInfo {
         TerningertilCDIO2 terningeObjekt = new TerningertilCDIO2();
 
