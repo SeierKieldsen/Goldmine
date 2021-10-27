@@ -36,9 +36,11 @@ public class Goldmine {
 
 
          if(switchObjekt.language.equals("dk")) {
+             System.out.println(spillerObjekt.Player1 + "´ tur");
              System.out.println("Tast 'a' for at rulle");
          }
          if (switchObjekt.language.equals("en")){
+             System.out.println(spillerObjekt.Player1 + "´ turn");
              System.out.println("Press 'a' to roll");
          }
           Scanner p1 = new Scanner(System.in);
@@ -48,7 +50,6 @@ public class Goldmine {
 
               do {
 
-                  System.out.println(spillerObjekt.Player1 + "´ tur");
                   terningeObjekt.rul();
                   System.out.println(terningeObjekt.getVærdi());
                   switchObjekt.Felter(terningeObjekt.getVærdi());
@@ -77,9 +78,11 @@ public class Goldmine {
       while (p2score > 0 && p2score <= 3000) {
 
           if(switchObjekt.language.equals("dk")) {
+              System.out.println(spillerObjekt.Player2 + "´ tur");
               System.out.println("Tast 'l' for at rulle");
           }
           if (switchObjekt.language.equals("en")){
+              System.out.println(spillerObjekt.Player2 + "´ turn");
               System.out.println("Press 'l' to roll");
           }
 
@@ -87,7 +90,6 @@ public class Goldmine {
           String type1 = p2.next();
           if (type1.equals("l")) {
               do {
-                  System.out.println(spillerObjekt.Player2 + "´ tur");
                   terningeObjekt.rul();
                   System.out.println(terningeObjekt.getVærdi());
                   switchObjekt.Felter(terningeObjekt.getVærdi());
