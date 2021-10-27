@@ -36,13 +36,18 @@ public class Goldmine {
       while (p1score > 0 && p1score <= 3000) {
 
 
-          System.out.println("Tast 'a' for at rulle");
+         if(switchObjekt.language.equals("dk")) {
+             System.out.println("Tast 'a' for at rulle");
+         }
+         if (switchObjekt.language.equals("en")){
+             System.out.println("Press 'a' to roll");
+         }
           Scanner p1 = new Scanner(System.in);
           String type = p1.next();
+
           if (type.equals("a")) {
 
               do {
-
 
                   System.out.println("Spiller1");
                   terningeObjekt.rul();
@@ -58,14 +63,27 @@ public class Goldmine {
               }
           }
           if (!type.equals("a")) {
-              System.out.println("Prøv igen tast 'a'");
-              continue;
+              if(switchObjekt.language.equals("dk")) {
+                  System.out.println("Prøv igen.");
+              }
+              if (switchObjekt.language.equals("en")) {
+                  System.out.println("Try again.");
+              }
+                  continue;
+
+
           }
 
       }
       while (p2score > 0 && p2score <= 3000) {
 
-          System.out.println("tast 'l' for at rulle");
+          if(switchObjekt.language.equals("dk")) {
+              System.out.println("Tast 'l' for at rulle");
+          }
+          if (switchObjekt.language.equals("en")){
+              System.out.println("Press 'l' to roll");
+          }
+
           Scanner p2 = new Scanner(System.in);
           String type1 = p2.next();
           if (type1.equals("l")) {
@@ -84,7 +102,12 @@ public class Goldmine {
               }
           }
           if (!type1.equals("l")) {
-              System.out.println("Prøv igen tast 'l'");
+              if(switchObjekt.language.equals("dk")) {
+                  System.out.println("Prøv igen.");
+              }
+              if (switchObjekt.language.equals("en")) {
+                  System.out.println("Try again.");
+              }
               continue;
 
           }
@@ -92,13 +115,28 @@ public class Goldmine {
   } while (p1score < 3000 && p2score < 3000 && p1score > 0 && p2score > 0);
 
   if (p1score > p2score) {
-      System.out.println("Tillykke spiller 1 har vundet" + spillerObjekt.Player1);
+      if (switchObjekt.language.equals("dk")) {
+          System.out.println("Tillykke spiller 1 har vundet" + spillerObjekt.Player1);
+      }
+      if (switchObjekt.language.equals("en")) {
+          System.out.println("Congratulations player 1 has won" + spillerObjekt.Player1);
+      }
   }
   if (p1score < p2score) {
-      System.out.println("Tillyke spiller 2 har vundet" + spillerObjekt.Player2);
+      if (switchObjekt.language.equals("dk")) {
+          System.out.println("Tillyke spiller 2 har vundet" + spillerObjekt.Player2);
+      }
+      if (switchObjekt.language.equals("en")){
+          System.out.println("\"Congratulations player 2 has won" + spillerObjekt.Player2);
+      }
   }
   if (p1score == p2score) {
-      System.out.println("Den blev uafgjort");
+      if (switchObjekt.language.equals("dk")) {
+          System.out.println("Den blev uafgjort");
+      }
+      if (switchObjekt.language.equals("en")) {
+          System.out.println("It was a draw");
+      }
   }
 
             }

@@ -7,10 +7,10 @@ public class Spiller {
     String Player1, Player2;
 
     public void navn() {
-        System.out.println("Spiller1 navn:");
+        System.out.println("player 1:");
         brugernavn.hasNextLine();
         this.Player1 = brugernavn.toString();
-        System.out.println("spiller2 navn:");
+        System.out.println("Player 2:");
         brugernavn2.hasNextLine();
         this.Player2 = brugernavn2.toString();
 
