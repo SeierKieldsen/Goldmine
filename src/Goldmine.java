@@ -1,7 +1,6 @@
-//vi skal have lavet så ved fejlindtastning skal den gå i loopet igen indtil man taster rigtigt.
+//hvis man taster forkert sprog, skal den redo switch
 // se om vi kan få det indtastede playername til at stå de forskellige steder
-// ændre engelsk/dansk i de tekstfelter der er skrevet her i main
-// evt ting der er overset????
+
 
 
 import java.util.Scanner;
@@ -20,13 +19,13 @@ public class Goldmine {
 
         System.out.println("Welcome to the game! Please choose a language / Velkommen til spillet! Vælg venligst et sprog");
 
+        String language;
         Scanner picklingo = new Scanner(System.in);
+        do {
+            System.out.print("For english please type 'en' / For dansk skriv venligst 'dk':   ");
 
-        System.out.print("For english please type 'en' / For dansk skriv venligst 'dk':   ");
-
-        String language = picklingo.next();
-
-        switchObjekt.sprog(language);
+            language = picklingo.next();
+        } while(!switchObjekt.sprog(language));
 
 
         spillerObjekt.navn();
@@ -49,7 +48,7 @@ public class Goldmine {
 
               do {
 
-                  System.out.println("Spiller1");
+                  System.out.println(spillerObjekt.Player1 + "´ tur");
                   terningeObjekt.rul();
                   System.out.println(terningeObjekt.getVærdi());
                   switchObjekt.Felter(terningeObjekt.getVærdi());
@@ -88,7 +87,7 @@ public class Goldmine {
           String type1 = p2.next();
           if (type1.equals("l")) {
               do {
-                  System.out.println("Spiller2");
+                  System.out.println(spillerObjekt.Player2 + "´ tur");
                   terningeObjekt.rul();
                   System.out.println(terningeObjekt.getVærdi());
                   switchObjekt.Felter(terningeObjekt.getVærdi());
@@ -116,18 +115,18 @@ public class Goldmine {
 
   if (p1score > p2score) {
       if (switchObjekt.language.equals("dk")) {
-          System.out.println("Tillykke spiller 1 har vundet" + spillerObjekt.Player1);
+          System.out.println("Tillykke " + spillerObjekt.Player1 + " vinder");
       }
       if (switchObjekt.language.equals("en")) {
-          System.out.println("Congratulations player 1 has won" + spillerObjekt.Player1);
+          System.out.println("Congratulations " + spillerObjekt.Player1 + " wins");
       }
   }
   if (p1score < p2score) {
       if (switchObjekt.language.equals("dk")) {
-          System.out.println("Tillyke spiller 2 har vundet" + spillerObjekt.Player2);
+          System.out.println("Tillyke " + spillerObjekt.Player2 + " vinder");
       }
       if (switchObjekt.language.equals("en")){
-          System.out.println("\"Congratulations player 2 has won" + spillerObjekt.Player2);
+          System.out.println("Congratulations " + spillerObjekt.Player2 + " wins");
       }
   }
   if (p1score == p2score) {

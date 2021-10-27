@@ -4,18 +4,18 @@
         Goldmine sprogObjekt = new Goldmine();
         String language;
 
-        public void sprog(String l) {
+        public boolean sprog(String l) {
             switch (l) {
-
                 case "en":
                     System.out.println("You have choosen english");
                     language = "en";
-                    break;
+                    return true;
                 case "dk":
                     System.out.println("Du har valgt dansk");
                     language = "dk";
-                    break;
+                    return true;
                 default:
+                    return false;
             }
         }
         int point;
