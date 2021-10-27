@@ -1,4 +1,4 @@
-//hans har lavet dette. pas på med at ændre, da det er vores skabelon
+
 
 import java.util.Random;
 import java.util.Scanner;
@@ -14,7 +14,7 @@ public class TerningertilCDIO2 {
     }
 
 
-    public void TerningertilCDIO2() {
+    public TerningertilCDIO2() {
 
         værdi = 1;
 
