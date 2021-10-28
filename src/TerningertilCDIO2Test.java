@@ -41,13 +41,22 @@ public class TerningertilCDIO2Test {
                 counter6++;
             }
 
+
         }
+        System.out.println("Test over 10.000 slag:");
         System.out.println("Antal 1'ere: " + counter1 );
         System.out.println("Antal 2'ere: " + counter2 );
         System.out.println("Antal 3'ere: " + counter3 );
         System.out.println("Antal 4'ere: " + counter4 );
         System.out.println("Antal 5'ere: " + counter5 );
         System.out.println("Antal 6'ere: " + counter6 );
+
+        assertTrue("Testen er forkert", counter1 < 2166 && counter1 > 1166);
+        assertTrue("Testen er forkert", counter2 < 2166 && counter2 > 1166);
+        assertTrue("Testen er forkert", counter3 < 2166 && counter3 > 1166);
+        assertTrue("Testen er forkert", counter4 < 2166 && counter4 > 1166);
+        assertTrue("Testen er forkert", counter5 < 2166 && counter5 > 1166);
+        assertTrue("Testen er forkert", counter6 < 2166 && counter6 > 1166);
 
 
     }
